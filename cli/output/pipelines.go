@@ -5,7 +5,7 @@ import (
 
 	"github.com/fatih/color"
 	"github.com/olekukonko/tablewriter"
-	"github.com/plouc/go-gitlab-client/gitlab"
+	"github.com/rockwang465/go-gitlab-client/gitlab"
 	"io"
 )
 
