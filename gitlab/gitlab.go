@@ -7,10 +7,12 @@ import (
 	"flag"
 	"fmt"
 	"io/ioutil"
+	"net"
 	"net/http"
 	"net/url"
 	"strconv"
 	"strings"
+	"time"
 
 	"github.com/google/go-querystring/query"
 )
@@ -77,8 +79,10 @@ func NewGitlab(baseUrl, apiPath, token string) *Gitlab {
 	tr := &http.Transport{
 		Proxy:           http.ProxyFromEnvironment,
 		TLSClientConfig: config,
+		Dial:            (&net.Dialer{Timeout: 30 * time.Second}).Dial, // fix request timeout
 	}
-	client := &http.Client{Transport: tr}
+	//client := &http.Client{Transport: tr}
+	client := &http.Client{Transport: tr, Timeout: 30 * time.Second} // fix request timeout
 
 	if apiPath == "" {
 		apiPath = "/api/v4"
