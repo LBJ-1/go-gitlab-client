@@ -163,8 +163,10 @@ func (g *Gitlab) Projects(o *ProjectsOptions) (*ProjectCollection, *ResponseMeta
 }
 
 type ProjectAddPayload struct {
-	Name string `json:"name"` // The name of the new project. Equals path if not provided
-	Path string `json:"path"` // Repository name for new project. Generated based on name if not provided (generated lowercased with dashes)
+	Name                 string `json:"name"`                   // The name of the new project. Equals path if not provided
+	Path                 string `json:"path"`                   // Repository name for new project. Generated based on name if not provided (generated lowercased with dashes)
+	NamespaceId          int    `json:"namespace_id"`           // Group project id, if not, create in user space
+	InitializeWithReadme bool   `json:"initialize_with_readme"` // Whether to create a Git repository with just a README.md file. Default is false. When this is true, you must not pass import_url or other attributes of this endpoint which specify alternative contents for the repository. Doing so might result in the following error: not a git repository.
 }
 
 func (g *Gitlab) AddProject(project *ProjectAddPayload) (*Project, *ResponseMeta, error) {
