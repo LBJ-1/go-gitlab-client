@@ -159,7 +159,12 @@ func (g *Gitlab) execRequest(method, url string, body []byte) (*http.Response, e
 	}
 
 	if resp.StatusCode >= http.StatusBadRequest {
-		err = fmt.Errorf("*Gitlab.buildAndExecRequest failed: <%d> %s %s", resp.StatusCode, req.Method, req.URL)
+		contents, errMsg := ioutil.ReadAll(resp.Body)
+		if errMsg != nil {
+			err = fmt.Errorf("*Gitlab.buildAndExecRequest failed: <%d> %s %s, message: %s", resp.StatusCode, req.Method, req.URL, errMsg)
+		}else{
+			err = fmt.Errorf("*Gitlab.buildAndExecRequest failed: <%d> %s %s, message: %s", resp.StatusCode, req.Method, req.URL, string(contents))
+		}
 	}
 
 	return resp, err
