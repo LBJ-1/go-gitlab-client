@@ -3,10 +3,10 @@ package cmd
 import (
 	"strconv"
 
+	out "github.com/LBJ-1/go-gitlab-client/cli/output"
+	"github.com/LBJ-1/go-gitlab-client/gitlab"
 	"github.com/fatih/color"
 	"github.com/manifoldco/promptui"
-	out "github.com/rockwang465/go-gitlab-client/cli/output"
-	"github.com/rockwang465/go-gitlab-client/gitlab"
 	"github.com/spf13/cobra"
 )
 

@@ -5,8 +5,8 @@ import (
 	"encoding/json"
 	"fmt"
 
+	"github.com/LBJ-1/go-gitlab-client/gitlab"
 	"github.com/fatih/color"
-	"github.com/rockwang465/go-gitlab-client/gitlab"
 	"gopkg.in/yaml.v2"
 	"io"
 )

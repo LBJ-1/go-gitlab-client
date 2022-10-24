@@ -6,9 +6,9 @@ import (
 	"os"
 	"time"
 
+	"github.com/LBJ-1/go-gitlab-client/gitlab"
 	"github.com/briandowns/spinner"
 	"github.com/fatih/color"
-	"github.com/rockwang465/go-gitlab-client/gitlab"
 	"github.com/spf13/cobra"
 )
 

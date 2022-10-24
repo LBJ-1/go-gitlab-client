@@ -4,9 +4,9 @@ import (
 	"fmt"
 	"io"
 
+	"github.com/LBJ-1/go-gitlab-client/gitlab"
 	"github.com/fatih/color"
 	"github.com/olekukonko/tablewriter"
-	"github.com/rockwang465/go-gitlab-client/gitlab"
 )
 
 func Branches(w io.Writer, format string, collection *gitlab.BranchCollection) {

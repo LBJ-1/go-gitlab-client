@@ -1,4 +1,4 @@
-module github.com/rockwang465/go-gitlab-client
+module github.com/LBJ-1/go-gitlab-client
 
 go 1.16
 

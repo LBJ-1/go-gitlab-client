@@ -3,7 +3,7 @@ package gitlab
 import (
 	"testing"
 
-	"github.com/rockwang465/go-gitlab-client/test"
+	"github.com/LBJ-1/go-gitlab-client/test"
 	"github.com/stretchr/testify/assert"
 )
 

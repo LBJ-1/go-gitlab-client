@@ -3,7 +3,7 @@ package cmd
 import (
 	"testing"
 
-	"github.com/rockwang465/go-gitlab-client/test"
+	"github.com/LBJ-1/go-gitlab-client/test"
 )
 
 func TestListSshKeysCmd(t *testing.T) {

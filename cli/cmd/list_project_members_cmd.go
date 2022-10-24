@@ -2,9 +2,9 @@ package cmd
 
 import (
 	"fmt"
+	out "github.com/LBJ-1/go-gitlab-client/cli/output"
+	"github.com/LBJ-1/go-gitlab-client/gitlab"
 	"github.com/fatih/color"
-	out "github.com/rockwang465/go-gitlab-client/cli/output"
-	"github.com/rockwang465/go-gitlab-client/gitlab"
 	"github.com/spf13/cobra"
 )
 

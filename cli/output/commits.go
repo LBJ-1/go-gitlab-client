@@ -4,8 +4,8 @@ import (
 	"fmt"
 	"io"
 
+	"github.com/LBJ-1/go-gitlab-client/gitlab"
 	"github.com/olekukonko/tablewriter"
-	"github.com/rockwang465/go-gitlab-client/gitlab"
 )
 
 func Commits(w io.Writer, format string, collection *gitlab.CommitCollection) {
